@@ -13,6 +13,8 @@
 		40A85692254FF70D00DD436F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A85691254FF70D00DD436F /* Assets.xcassets */; };
 		40A85695254FF70D00DD436F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A85694254FF70D00DD436F /* Preview Assets.xcassets */; };
 		40A85698254FF70D00DD436F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A85696254FF70D00DD436F /* LaunchScreen.storyboard */; };
+		40A856A12550001300DD436F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A856A02550001300DD436F /* NetworkManager.swift */; };
+		40A856A32550082F00DD436F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A856A22550082F00DD436F /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		40A85694254FF70D00DD436F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40A85697254FF70D00DD436F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40A85699254FF70D00DD436F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A856A02550001300DD436F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		40A856A22550082F00DD436F /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		40A8568A254FF70800DD436F /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				40A8569F254FFFEF00DD436F /* Models */,
 				40A8568B254FF70800DD436F /* AppDelegate.swift */,
 				40A8568D254FF70800DD436F /* SceneDelegate.swift */,
 				40A8568F254FF70800DD436F /* ContentView.swift */,
@@ -73,6 +78,15 @@
 				40A85694254FF70D00DD436F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40A8569F254FFFEF00DD436F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40A856A02550001300DD436F /* NetworkManager.swift */,
+				40A856A22550082F00DD436F /* PostData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A856A32550082F00DD436F /* PostData.swift in Sources */,
+				40A856A12550001300DD436F /* NetworkManager.swift in Sources */,
 				40A8568C254FF70800DD436F /* AppDelegate.swift in Sources */,
 				40A8568E254FF70800DD436F /* SceneDelegate.swift in Sources */,
 				40A85690254FF70800DD436F /* ContentView.swift in Sources */,
