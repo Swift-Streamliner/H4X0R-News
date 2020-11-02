@@ -9,15 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var networkManager = NetworkManager()
+    
     var body: some View {
         NavigationView {
-            List(posts) { post in
-                Text(post.story_title)
+            List(networkManager.posts) { post in
+                self.buildView(post: post)
             }
             .navigationBarTitle("H4X0R News")
         }
+        .onAppear {
+            self.networkManager.fetchData()
+        }
+    }
     
-        
+    func buildView(post: Post) -> some View {
+        if let title = post.story_title {
+            let stackView =  HStack {
+                Text(post.created_at).bold()
+                Text(title)
+            }
+            return stackView
+        } else {
+            return HStack {
+                Text("No data")
+                Text("No title")
+            }
+        }
     }
 }
 
@@ -27,6 +45,3 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-let posts = [
-    Post(story_title: "First story", points: 1, story_url: "http:www", objectID: "123")
-]
