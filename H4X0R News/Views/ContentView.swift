@@ -14,7 +14,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.posts) { post in
-                self.buildView(post: post)
+                NavigationLink(destination: DetailView(url: post.story_url)){
+                    self.buildView(post: post)
+                }
+                
             }
             .navigationBarTitle("H4X0R News")
         }
